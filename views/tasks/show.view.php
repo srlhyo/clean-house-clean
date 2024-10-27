@@ -7,11 +7,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <a href="/tasks" class="underline text-blue-500">Go back...</a>
         <p class="py-6"><?= htmlspecialchars($task['description']) ?></p>
-        <form action="" method="POST">
+        <!-- <form action="" method="POST">
             <input type="hidden" name="_method" value="DELETE">
             <input type="hidden" name="id" value=<?= $task['id']?>>
             <button type="submit" class="text-xs text-red-500">Delete</button>
-        </form>
+        </form> -->
+        <div class="mt-6">
+            <a href="/task/edit?id=<?= $task['id'] ?>" class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Edit Task</a>
+        </div>
     </div>
 </main>
 
